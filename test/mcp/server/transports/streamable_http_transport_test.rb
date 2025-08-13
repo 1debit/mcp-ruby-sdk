@@ -694,7 +694,7 @@ module MCP
           assert_equal({ "Content-Type" => "application/json" }, response[1])
 
           body = response[2][0]
-          assert body.blank?
+          assert_nil(body)
         end
 
         test "handle post request with a standard error" do
